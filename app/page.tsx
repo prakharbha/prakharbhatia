@@ -1,20 +1,21 @@
-import { HeroShaderCV } from "@/components/ui/hero-shader-cv"
-import { WovenLightCV } from "@/components/ui/woven-light-cv"
-// import { CaseStudiesCV } from "@/components/ui/case-studies-cv"  // temporarily hidden
-import { ServicesCV } from "@/components/ui/services-cv"
-import { PersonalGalleryCV } from "@/components/ui/personal-gallery-cv"
-import { WildlifeGalleryCV } from "@/components/ui/wildlife-gallery-cv"
-import { ContactGlobeCV } from "@/components/ui/contact-globe-cv"
+import type { Metadata } from "next";
+import "./cinematic.css";
+import CinematicHome from "@/components/cinematic-home";
+
+export const metadata: Metadata = {
+  title: "Prakhar Bhatia — Full-Stack Developer · Agentic AI · Web3",
+  description:
+    "Prakhar Bhatia builds full-stack products with AI, Rust, Python, Node.js, React and Next.js. 20+ years across the stack, agentic AI systems, Web3 and FinTech. Founder of Nandann Creative Agency.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "Prakhar Bhatia — Full-Stack · Agentic AI · Web3",
+    description:
+      "Full-stack products with AI, Rust, Python & the modern web. 20+ years, agentic AI systems, Web3, FinTech.",
+    url: "/",
+    type: "website",
+  },
+};
 
 export default function Home() {
-  return (
-    <main className="bg-black">
-      <HeroShaderCV />
-      <WovenLightCV />
-      <ServicesCV />
-      <PersonalGalleryCV />
-      <WildlifeGalleryCV />
-      <ContactGlobeCV />
-    </main>
-  )
+  return <CinematicHome />;
 }

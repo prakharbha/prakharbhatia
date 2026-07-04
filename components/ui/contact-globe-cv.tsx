@@ -67,7 +67,7 @@ function GlobeMini() {
         return true
       }
       if (g.type === "MultiPolygon") {
-        for (const poly of g.coordinates as number[][][]) {
+        for (const poly of g.coordinates as unknown as number[][][][]) {
           if (pip(pt, poly[0])) {
             let inHole = false
             for (let i = 1; i < poly.length; i++) if (pip(pt, poly[i])) { inHole = true; break }
